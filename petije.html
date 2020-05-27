@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>PetiJe</title>
+  <meta charset="utf-8"/>
+  <link rel ="stylesheet" href = "PetiJe.css">
+  <script type="application/javascript">
+
+let animGER = window.requestAnimationFrame(animateGER);
+let giorno = new Image();
+let giogio = new Audio();
+  let gordoExperiensuRequiemDa = new Image();
+  let GEReturn = new Image();
+  let Gooldown;
+  let Jooldown;
+
+let GERx = (280)
+let GERy = (0)
+let GERw = (200)
+let GERh = (480)
+let GERzp = (0)
+let GERzm = (0)
+
+giogio.play();
+
+    function draw() {
+  let ctx = document.getElementById('canvas').getContext('2d');
+
+  giorno.onload = function() {
+    ctx.drawImage(giorno, 0, 0, 290, 1002, 190, 50, 116, 401);
+
+  };
+
+  gordoExperiensuRequiemDa.onload = function(){
+    ctx.drawImage(gordoExperiensuRequiemDa, 400, 0, 400, 1142, 50, -40, 167, 501)
+  }
+
+  GEReturn.src = 'Images/Requiem.png'
+  giorno.src = 'Images/giorno.png';
+  gordoExperiensuRequiemDa.src = 'https://pbs.twimg.com/media/DuGQvxqW0AITsMn.png'
+  giogio.src = 'GioGio.mp3'
+
+}
+function animateGER(){
+  window.addEventListener('keydown', function(event) {
+
+    console.log(event.code)
+    switch(event.code){
+         case "KeyS":
+         case "ArrowDown":
+
+         if(GERw < 300){
+          ctx = document.getElementById('canvas').getContext('2d');
+         GERx = (GERx)
+         GERy = (GERy)
+         GERw = (GERw + 10)
+         GERh = (GERh + 30)
+         GERzp = (GERzp + 2000)
+         GERzm = (GERzm - 2000)
+         if((GERw - 116) >  84){
+          ctx.clearRect(0, 0, 1528, 730)
+          ctx.drawImage(giorno, 0, 0, 290, 1002, 190, 50, 116, 401);
+          ctx.drawImage(gordoExperiensuRequiemDa, 400, 0, 400, 1142, GERx, GERy, GERw, GERh)
+         }
+         else if((GERx + 160 < 190 + 240) && (GERx + 160 > 190) && (GERw = 200)){
+          GERx = (GERx)
+         GERy = (GERy)
+         GERw = (GERw - 10)
+         GERh = (GERh - 30)
+         GERzp = (GERzp - 2000)
+         GERzm = (GERzm + 2000)
+
+         }
+         else {
+          ctx.clearRect(0, 0, 1528, 730)
+          ctx.drawImage(gordoExperiensuRequiemDa, 400, 0, 400, 1142, GERx, GERy, GERw, GERh)
+          ctx.drawImage(giorno, 0, 0, 290, 1002, 190, 50, 116, 401);
+         }
+
+         }
+    }
+
+    switch(event.code){
+         case "KeyA":
+         case "ArrowLeft":
+
+          ctx = document.getElementById('canvas').getContext('2d');
+          ctx.clearRect(0, 0, 1528, 730)
+         GERx = (GERx - 10)
+         GERy = (GERy)
+         GERw = (GERw)
+         GERh = (GERh)
+         if((GERw - 116) >  84){
+          ctx.drawImage(giorno, 0, 0, 290, 1002, 190, 50, 116, 401);
+          ctx.drawImage(GEReturn, 850, 0, 350, 1142, GERx, GERy, GERw, GERh)
+         }
+         else if((GERx + 40 + GERzm < 190 + 116) && (GERx + 40 + GERzm > 190) && (GERw = 200)){
+          GERx = (GERx + 10)
+         GERy = (GERy)
+         GERw = (GERw)
+         GERh = (GERh)
+         ctx.drawImage(GEReturn, 850, 0, 350, 1142, GERx, GERy, GERw, GERh)
+         ctx.drawImage(giorno, 0, 0, 290, 1002, 190, 50, 116, 401);
+         }
+         else {
+          ctx.drawImage(GEReturn, 850, 0, 350, 1142, GERx, GERy, GERw, GERh)
+          ctx.drawImage(giorno, 0, 0, 290, 1002, 190, 50, 116, 401);
+         }
+    }
+
+    switch(event.code){
+         case "KeyW":
+         case "ArrowUp":
+
+         if(GERw > 170){
+          ctx = document.getElementById('canvas').getContext('2d');
+         GERx = (GERx)
+         GERy = (GERy)
+         GERw = (GERw - 10)
+         GERh = (GERh - 30)
+         GERzp = (GERzp - 2000)
+         GERzm = (GERzm + 2000)
+         if((GERw - 116) >  84){
+          ctx.clearRect(0, 0, 1528, 730)
+          ctx.drawImage(giorno, 0, 0, 290, 1002, 190, 50, 116, 401);
+          ctx.drawImage(gordoExperiensuRequiemDa, 800, 0, 400, 1142, GERx, GERy, GERw, GERh)
+         }
+         else if((GERx + 160 < 190 + 240) && (GERx + 160 > 190) && (GERw = 200)){
+          GERx = (GERx)
+         GERy = (GERy)
+         GERw = (GERw + 10)
+         GERh = (GERh + 30)
+         GERzp = (GERzp + 2000)
+         GERzm = (GERzm - 2000)
+
+         }
+         else {
+          ctx.clearRect(0, 0, 1528, 730)
+          ctx.drawImage(gordoExperiensuRequiemDa, 750, 0, 400, 1142, GERx, GERy, GERw, GERh)
+          ctx.drawImage(giorno, 0, 0, 290, 1002, 190, 50, 116, 401);
+         }
+         }
+
+         }
+
+    switch(event.code) {
+      
+    case "KeyD":
+    case "ArrowRight":
+
+         let ctx = document.getElementById('canvas').getContext('2d');
+         ctx.clearRect(0, 0, 1528, 730)
+         GERx = (GERx +10)
+         GERy = (GERy)
+         GERw = (GERw)
+         GERh = (GERh)
+         if((GERw - 116) >  84){
+          ctx.drawImage(giorno, 0, 0, 290, 1002, 190, 50, 116, 401);
+          ctx.drawImage(gordoExperiensuRequiemDa, 0, 0, 350, 1142, GERx, GERy, GERw, GERh)
+         }
+          else if((GERx + 116 + GERzm < 190 + 116) && (GERx + 116 + GERzm > 190) && (GERw = 200)){
+          GERx = (GERx - 10)
+         GERy = (GERy)
+         GERw = (GERw)
+         GERh = (GERh)
+         ctx.drawImage(gordoExperiensuRequiemDa, 0, 0, 350, 1142, GERx, GERy, GERw, GERh)
+         ctx.drawImage(giorno, 0, 0, 290, 1002, 190, 50, 116, 401);
+         }
+         else {
+          ctx.drawImage(gordoExperiensuRequiemDa, 0, 0, 350, 1142, GERx, GERy, GERw, GERh)
+          ctx.drawImage(giorno, 0, 0, 290, 1002, 190, 50, 116, 401);
+         }
+
+
+    }
+    switch(event.code){
+      case "Space":
+        ctx = document.getElementById('canvas').getContext('2d');
+         ctx.clearRect(0, 0, 1528, 730)
+         GERx = (GERx)
+         GERy = (GERy - 5)
+         GERw = (GERw)
+         GERh = (GERh)
+         Gooldown = window.setTimeout(GERJump, 300)
+
+         if((GERw - 116) >  84){
+          ctx.clearRect(0, 0, 1528, 730)
+          ctx.drawImage(giorno, 0, 0, 290, 1002, 190, 50, 116, 401);
+          ctx.drawImage(gordoExperiensuRequiemDa, 0, 0, 350, 1142, GERx, GERy, GERw, GERh)
+         }
+         else if((GERx + 160 < 190 + 240) && (GERx + 160 > 190) && (GERw = 200)){
+          GERx = (GERx)
+         GERy = (GERy + 5)
+         GERw = (GERw)
+         GERh = (GERh)
+         GERzp = (GERzp)
+         GERzm = (GERzm)
+         ctx.drawImage(gordoExperiensuRequiemDa, 0, 0, 350, 1142, GERx, GERy, GERw, GERh)
+         ctx.drawImage(giorno, 0, 0, 290, 1002, 190, 50, 116, 401);
+
+         }
+         else {
+          ctx.clearRect(0, 0, 1528, 730)
+          ctx.drawImage(gordoExperiensuRequiemDa, 0, 0, 350, 1142, GERx, GERy, GERw, GERh)
+          ctx.drawImage(giorno, 0, 0, 290, 1002, 190, 50, 116, 401);
+         }
+      }
+         
+    function GERJump(){
+      GERy = (GERy + 5)
+      if((GERw - 116) >  84){
+          ctx.clearRect(0, 0, 1528, 730)
+          ctx.drawImage(giorno, 0, 0, 290, 1002, 190, 50, 116, 401);
+          ctx.drawImage(gordoExperiensuRequiemDa, 0, 0, 350, 1142, GERx, GERy, GERw, GERh)
+         }
+         else if((GERx + 160 < 190 + 240) && (GERx + 160 > 190) && (GERw = 200)){
+          GERx = (GERx)
+         GERy = (GERy)
+         GERw = (GERw)
+         GERh = (GERh)
+         GERzp = (GERzp)
+         GERzm = (GERzm)
+         ctx.drawImage(gordoExperiensuRequiemDa, 0, 0, 350, 1142, GERx, GERy, GERw, GERh)
+         ctx.drawImage(giorno, 0, 0, 290, 1002, 190, 50, 116, 401);
+
+         }
+         else {
+          ctx.clearRect(0, 0, 1528, 730)
+          ctx.drawImage(gordoExperiensuRequiemDa, 0, 0, 350, 1142, GERx, GERy, GERw, GERh)
+          ctx.drawImage(giorno, 0, 0, 290, 1002, 190, 50, 116, 401);
+         }
+
+    }
+  })
+}
+    
+  </script>
+ </head>
+ <body onload="draw();">
+   <canvas id="canvas" width="1528" height="730"></canvas>
+ </body>
+</html>
