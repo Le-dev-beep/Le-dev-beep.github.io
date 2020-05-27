@@ -25,6 +25,11 @@ giogio.play();
 
     function draw() {
   let ctx = document.getElementById('canvas').getContext('2d');
+     
+            GEReturn.onload = function(){
+    ctx.drawImage(GEReturn, 400, 0, 400, 1142, 50, -40, 167, 501)
+                                ctx.clearRect(0, 0, 1528, 730)
+            }
 
   giorno.onload = function() {
     ctx.drawImage(giorno, 0, 0, 290, 1002, 190, 50, 116, 401);
